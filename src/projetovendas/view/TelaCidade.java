@@ -38,9 +38,9 @@ public class TelaCidade extends javax.swing.JFrame {
         jTFCodigoIbge = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jBCadastrar = new javax.swing.JButton();
+        jBCancelar = new javax.swing.JButton();
+        jBExcluir = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,16 +55,26 @@ public class TelaCidade extends javax.swing.JFrame {
 
         jLabel2.setText("Codigo Ibge");
 
-        jButton1.setText("Cadastrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBCadastrar.setText("Cadastrar");
+        jBCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBCadastrarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cancelar");
+        jBCancelar.setText("Cancelar");
+        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCancelarActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Excluir");
+        jBExcluir.setText("Excluir");
+        jBExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBExcluirActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Alterar");
 
@@ -83,11 +93,11 @@ public class TelaCidade extends javax.swing.JFrame {
                             .addComponent(jTFCodigoIbge, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(186, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jBCadastrar)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(jBCancelar)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(jBExcluir)
                         .addGap(18, 18, 18)
                         .addComponent(jButton4)
                         .addGap(20, 20, 20))))
@@ -104,9 +114,9 @@ public class TelaCidade extends javax.swing.JFrame {
                 .addComponent(jTFCodigoIbge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
+                    .addComponent(jBCadastrar)
+                    .addComponent(jBCancelar)
+                    .addComponent(jBExcluir)
                     .addComponent(jButton4))
                 .addGap(27, 27, 27))
         );
@@ -118,13 +128,35 @@ public class TelaCidade extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFNomeCidadeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
        cidadeController.setCidade(new Cidade());
        cidadeController.getCidade().setNome(jTFNomeCidade.getText());
        cidadeController.getCidade().setCodibge(Integer.parseInt(jTFCodigoIbge.getText()));
        cidadeController.cadastrar();
-    }//GEN-LAST:event_jButton1ActionPerformed
+        System.out.println("a cidade eh"+ cidadeController.getCidade());
+        limpar();
+        System.out.println("a cidade eh"+ cidadeController.getCidade());
+       exlcuir();
+       
+    }//GEN-LAST:event_jBCadastrarActionPerformed
 
+    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+       limpar();
+    }//GEN-LAST:event_jBCancelarActionPerformed
+
+    private void jBExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExcluirActionPerformed
+        exlcuir();
+    }//GEN-LAST:event_jBExcluirActionPerformed
+   
+    private void limpar(){
+       jTFCodigoIbge.setText("");
+       jTFNomeCidade.setText(""); 
+    }
+    
+    private void exlcuir(){
+    cidadeController.excluir();
+       System.out.println("a cidade eh"+ cidadeController.getCidade());
+    }
     /**
      * @param args the command line arguments
      */
@@ -161,9 +193,9 @@ public class TelaCidade extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jBCadastrar;
+    private javax.swing.JButton jBCancelar;
+    private javax.swing.JButton jBExcluir;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
