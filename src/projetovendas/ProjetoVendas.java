@@ -9,6 +9,7 @@ import projetovendas.model.Cliente;
 import projetovendas.model.Endereco;
 import projetovendas.model.Fornecedor;
 import projetovendas.view.TelaCidade;
+import projetovendas.view.TelaEndereco;
 
 /**
  *
@@ -20,8 +21,10 @@ public class ProjetoVendas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        TelaCidade cidade = new TelaCidade();
-        cidade.show();
+//        TelaCidade cidade = new TelaCidade();
+//        cidade.show();
+        TelaEndereco endereco = new TelaEndereco();
+        endereco.show();
 
     }
     

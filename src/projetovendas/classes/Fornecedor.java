@@ -12,13 +12,9 @@ import projetovendas.interfaces.IPesquisar;
  *
  * @author aluno
  */
-public class Fornecedor extends Pessoa implements IPesquisar{
+public class Fornecedor extends Pessoa {
     private boolean  status;
 
-    @Override
-    public Pessoa pesquisar() {
-       return new Fornecedor();
-    }
 
     public boolean isStatus() {
         return status;

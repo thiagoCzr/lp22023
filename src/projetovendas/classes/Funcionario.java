@@ -17,10 +17,7 @@ public class Funcionario extends Pessoa{
     private String funcao;
     private int status;
     
-    public void pesquisar(){
-    
-    }
-
+  
     public String getCargo() {
         return cargo;
     }

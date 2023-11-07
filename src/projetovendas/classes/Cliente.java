@@ -10,17 +10,13 @@ import projetovendas.interfaces.IPesquisar;
  *
  * @author aluno
  */
-public class Cliente extends Pessoa implements IPesquisar{
+public class Cliente extends Pessoa {
     
     private Double renda;
     private int status;
     private String localDeTrabalho;
 
-    @Override
-    public Pessoa pesquisar() {
-        return  new Cliente();
-    }
-
+   
     public Double getRenda() {
         return renda;
     }

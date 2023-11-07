@@ -34,7 +34,7 @@ public class Cidade implements IOperacao {
     @Override
     public void cadastrar() {
          String insert  = "insert into cidade(nome_cidade, codigo_ibge) "
-                + "values('"+cidade.getNome()+"',"+cidade.getCodibge()+")";
+                + "values('"+getNome()+"',"+getCodibge()+")";
         System.out.println(insert);
     }
 

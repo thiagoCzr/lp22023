@@ -5,12 +5,14 @@
 package projetovendas.classes;
 
 import projetovendas.interfaces.IOperacao;
+import projetovendas.interfaces.IPesquisar;
+
 
 /**
  *
  * @author aluno
  */
-public class Pessoa implements IOperacao {
+public class Pessoa implements IOperacao , IPesquisar {
 
     private String nome;
     private String tipoPessoa;
@@ -79,6 +81,11 @@ public class Pessoa implements IOperacao {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    @Override
+    public projetovendas.model.Pessoa pesquisar() {
+        return  null;
     }
     
     

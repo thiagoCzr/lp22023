@@ -13,6 +13,8 @@ import projetovendas.interfaces.IOperacao;
 public class Endereco implements IOperacao{
     private String logradouro;
     private Cidade cidade;
+    
+    //antonio cristiana isaac 
     private String bairro;
 
     @Override
