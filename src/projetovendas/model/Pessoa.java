@@ -4,6 +4,7 @@
  */
 package projetovendas.model;
 
+import java.util.List;
 import projetovendas.interfaces.IOperacao;
 
 /**
@@ -17,7 +18,7 @@ public class Pessoa implements IOperacao {
     private String email;
     private int contador;
 
-    protected Endereco endereco;
+    protected List<Endereco> enderecos;
 
     @Override
     public void cadastrar() {
@@ -73,13 +74,14 @@ public class Pessoa implements IOperacao {
         this.contador = contador;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public List<Endereco> getEnderecos() {
+        return enderecos;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
+
     
     
 
