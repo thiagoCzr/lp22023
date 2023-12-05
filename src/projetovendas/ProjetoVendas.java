@@ -24,63 +24,63 @@ public class ProjetoVendas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        TelaCidade cidade = new TelaCidade();
-//        cidade.show();
+TelaCidade cidade = new TelaCidade();
+        cidade.show();
 //        TelaEndereco endereco = new TelaEndereco();
 //        endereco.show();
-
-          Cidade cidadeTrabalho = new Cidade();
-          cidadeTrabalho.setCodibge(123);
-          cidadeTrabalho.setNome("Umuarama");
-          
-          Cidade cidadeCasa = new Cidade();
-          cidadeCasa.setCodibge(123);
-          cidadeCasa.setNome("ivatE");
-          
-          Endereco enderecoCasa = new Endereco();
-          enderecoCasa.setBairro("Centro");
-          enderecoCasa.setCidade(cidadeCasa);
-          enderecoCasa.setLogradouro("Av brasil");
-          
-          Endereco enderecoTrampo = new Endereco();
-          enderecoTrampo.setBairro("Centro");
-          enderecoTrampo.setCidade(cidadeTrabalho);
-          enderecoTrampo.setLogradouro("Av parana");
-          
-          Cliente cliente = new Cliente();
-          cliente.setContador(0);
-          cliente.setEmail("email@mail");
-          cliente.setLocalDeTrabalho("casa");
-          cliente.setNome("Cristiano");
-          cliente.setRenda(150000.00);
-          cliente.setStatus(0);
-          cliente.setTipoPessoa("fisica");
-          
-          List<Endereco> listaEnderecosCliente = new ArrayList();
-          listaEnderecosCliente.add(enderecoCasa);
-          listaEnderecosCliente.add(enderecoTrampo);
-          
-          cliente.setEnderecos(listaEnderecosCliente);
-          
-          
-          Cliente cliente2 = new Cliente();
-          cliente2.setContador(0);
-          cliente2.setEmail("email@mail");
-          cliente2.setLocalDeTrabalho("casa");
-          cliente2.setNome("Ana");
-          cliente2.setRenda(18000.00);
-          cliente2.setStatus(0);
-          cliente2.setTipoPessoa("fisica");
-          
-          List<Endereco> listaEnderecosCliente2 = new ArrayList();
-          listaEnderecosCliente2.add(enderecoCasa);
-          listaEnderecosCliente2.add(enderecoTrampo);
-          
-          cliente2.setEnderecos(listaEnderecosCliente2);
-          
-          List<Cliente> listaDeClientes = new ArrayList();
-          listaDeClientes.add(cliente);
-          listaDeClientes.add(cliente2);
+//
+//          Cidade cidadeTrabalho = new Cidade();
+//          cidadeTrabalho.setCodibge(123);
+//          cidadeTrabalho.setNome("Umuarama");
+//          
+//          Cidade cidadeCasa = new Cidade();
+//          cidadeCasa.setCodibge(123);
+//          cidadeCasa.setNome("ivatE");
+//          
+//          Endereco enderecoCasa = new Endereco();
+//          enderecoCasa.setBairro("Centro");
+//          enderecoCasa.setCidade(cidadeCasa);
+//          enderecoCasa.setLogradouro("Av brasil");
+//          
+//          Endereco enderecoTrampo = new Endereco();
+//          enderecoTrampo.setBairro("Centro");
+//          enderecoTrampo.setCidade(cidadeTrabalho);
+//          enderecoTrampo.setLogradouro("Av parana");
+//          
+//          Cliente cliente = new Cliente();
+//          cliente.setContador(0);
+//          cliente.setEmail("email@mail");
+//          cliente.setLocalDeTrabalho("casa");
+//          cliente.setNome("Cristiano");
+//          cliente.setRenda(150000.00);
+//          cliente.setStatus(0);
+//          cliente.setTipoPessoa("fisica");
+//          
+//          List<Endereco> listaEnderecosCliente = new ArrayList();
+//          listaEnderecosCliente.add(enderecoCasa);
+//          listaEnderecosCliente.add(enderecoTrampo);
+//          
+//          cliente.setEnderecos(listaEnderecosCliente);
+//          
+//          
+//          Cliente cliente2 = new Cliente();
+//          cliente2.setContador(0);
+//          cliente2.setEmail("email@mail");
+//          cliente2.setLocalDeTrabalho("casa");
+//          cliente2.setNome("Ana");
+//          cliente2.setRenda(18000.00);
+//          cliente2.setStatus(0);
+//          cliente2.setTipoPessoa("fisica");
+//          
+//          List<Endereco> listaEnderecosCliente2 = new ArrayList();
+//          listaEnderecosCliente2.add(enderecoCasa);
+//          listaEnderecosCliente2.add(enderecoTrampo);
+//          
+//          cliente2.setEnderecos(listaEnderecosCliente2);
+//          
+//          List<Cliente> listaDeClientes = new ArrayList();
+//          listaDeClientes.add(cliente);
+//          listaDeClientes.add(cliente2);
           
           
 //          for(Cliente verCliente : listaDeClientes){
