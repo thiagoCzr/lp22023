@@ -4,7 +4,13 @@
  */
 package projetovendas.model;
 
+
+import java.sql.SQLException;
 import projetovendas.interfaces.IOperacao;
+
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,7 +20,10 @@ public class Cidade implements IOperacao {
 
     private String nome;
     private int codibge;
+    
+    private Statement mysqStatement = null;
 
+   
     public String getNome() {
         return nome;
     }
@@ -35,7 +44,15 @@ public class Cidade implements IOperacao {
     public void cadastrar() {
          String insert  = "insert into cidade(nome_cidade, codigo_ibge) "
                 + "values('"+getNome()+"',"+getCodibge()+")";
-        System.out.println(insert);
+         mysqStatement = ConexaoDB.getStatement();
+         
+        try {
+            mysqStatement.executeUpdate(insert);
+        } catch (SQLException ex) {
+           ex.printStackTrace();
+        }
+         
+       
     }
 
     @Override
